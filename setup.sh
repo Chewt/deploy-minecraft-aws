@@ -6,6 +6,7 @@ sudo apt -y install openjdk-17-jdk-headless
 
 # Create mincraft folder
 mkdir /home/ubuntu/minecraft_server
+sudo chown ubuntu:ubuntu /home/ubuntu/minecraft_server
 cd /home/ubuntu/minecraft_server
 
 # Get latest server.jar file
@@ -65,5 +66,5 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl enable minecraft_server.service
 
-# Start the service
+# Start minecraft server
 sudo systemctl start minecraft_server
